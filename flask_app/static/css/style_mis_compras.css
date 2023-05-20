@@ -1,0 +1,70 @@
+.header {
+    background-color: #5d5d5d; /* Cambia el color a tu elección */
+    padding: 20px; /* Ajusta el espacio de separación según tus necesidades */
+    width: 100%;
+    height: 100%;
+}
+
+body{
+  background-color: #a4a4a4;
+  background: url('../imagenes/garage.jpg');
+  background-size: cover;
+}
+  
+.main {
+    width: 100%;
+    height: 100%;
+}
+
+.titulo_pag{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 100px;
+    text-align: center;
+}
+
+.coche_cuadro{
+  width: 940px; 
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.coche_cuadro li{
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  vertical-align: top;
+  margin: 0 1.5%;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  border: 5px solid #000;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  background-color: #717171;
+}
+
+.coche_cuadro p{
+  font-size: 22px;
+}
+
+img {
+  max-width: 200px; /* Ajusta el valor según el tamaño deseado */
+  height: auto; /* Mantiene la proporción de aspecto */
+}
+
+.alerta{
+    margin-top: 500px;
+    text-align: center;
+}
+
+.alerta a{
+    text-align: center;
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.alerta a:hover{
+    color: aqua;
+    text-decoration: underline;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/mis_coches.css">
+    <title>Mis publicaciones</title>
+</head>
+<body>
+
+    <header class="header">
+        <h1 class="titulo_pag">Mis publicaciones</h1>
+    </header>
+
+   <main class="main">
+    
+    {% if usuario_obj.publicados |length != 0 %}
+    
+        <ul class="coche_cuadro">
+            {% for coche in usuario_obj.publicados %}
+                <li>
+                    <h3 class="modelo_marca_coche"> {{coche.marca}} {{coche.modelo}}</h3>
+                    <img src='../static/imagenes/{{loop.index}}.jpg'>
+                    <p class="kilometraje_coche"> Kilometraje: {{coche.kilometraje}} </p>
+                    <p class="precio_coche"> Precio: {{coche.precio}} </p>
+                    <button class="button"><a href="/modificar_coche/{{coche.id_coche}}">Modificar</a></button>
+                    <button class="button"><a href="/eliminar_coche_db/{{coche.id_coche}}">Eliminar</a></button>
+                </li>
+            {% endfor %}
+        </ul>
+    
+    {% else %}
+         <h1><a href="/registro_coche">Mi hermano, no cuentas con publicaciones, pero puedes hacer una aqui</a></h1>
+    {% endif %}
+   </main>
+
+</body>
+</html>

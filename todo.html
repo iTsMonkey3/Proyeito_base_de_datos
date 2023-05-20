@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Barra desplegable de modelos de coches</title>
+</head>
+<body>
+  <select id="select-modelo" onchange="mostrarDetalles()">
+    <option value="">Selecciona un modelo</option>
+  </select>
+  
+  <div id="detalles-coche"></div>
+  
+  <button onclick="ocultarDetalles()">Ocultar detalles</button>
+
+  <script>
+    var coche_obj = {{ coche_obj | tojson }};
+    var coches = JSON.parse(coche_obj);
+
+    var selectModelo = document.getElementById('select-modelo');
+
+    coches.forEach(function(coche) {
+      var option = document.createElement('option');
+      option.value = coche.modelo;
+      option.textContent = coche.modelo;
+      selectModelo.appendChild(option);
+    });
+
+    function mostrarDetalles() {
+      var selectModelo = document.getElementById('select-modelo');
+      var detallesCoche = document.getElementById('detalles-coche');
+    
+      var modeloSeleccionado = selectModelo.value;
+    
+      // Buscar el coche seleccionado en la lista
+      var cocheSeleccionado = coches.find(function(coche) {
+        return coche.modelo === modeloSeleccionado;
+      });
+    
+      // Mostrar los detalles del coche seleccionado
+      if (cocheSeleccionado) {
+        detallesCoche.innerHTML = `
+          <p>Modelo: ${cocheSeleccionado.modelo}</p>
+          <p>Color: ${cocheSeleccionado.color}</p>
+          <p>Precio: ${cocheSeleccionado.precio}</p>
+        `;
+      } else {
+        detallesCoche.innerHTML = '';
+      }
+    }
+    
+    function ocultarDetalles() {
+      var detallesCoche = document.getElementById('detalles-coche');
+      detallesCoche.innerHTML = '';
+    }
+  </script>
+</body>
+</html>

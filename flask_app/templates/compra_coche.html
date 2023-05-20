@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form action="/registrar_compra_db" method="POST">
+            <p class="cuenta-gratis">Ingresa los datos del coche que deseas publicar</p>
+            <input type="hidden" name="id_coche" value="{{ coche_obj.id_coche }}">
+            <input type="hidden" name="matricula" value="{{ coche_obj.matricula }}">
+            <input type="hidden" name="modelo" value="{{ coche_obj.modelo }}">
+            <input type="hidden" name="marca" value="{{ coche_obj.marca }}">
+            <input type="hidden" name="precio" value="{{ coche_obj.precio }}">
+            <input type="hidden" name="comprador_id" value="{{ logged_user.id_usuario }}">
+            <input type="hidden" name="vendedor_id" value="{{ coche_obj.vendedor.id_usuario }}">
+
+            <p>id coche{{ coche_obj.id_coche }} id usuario{{ logged_user.id_usuario }} id vendedor{{ coche_obj.vendedor.id_usuario }}</p>
+
+            <h2>Detalles del Coche:</h2>
+            <p>Marca: {{ coche_obj.marca }}</p>
+            <p>Modelo: {{ coche_obj.modelo }}</p>
+            <p>Precio: {{ coche_obj.precio }}</p>
+            <p>Vendedor: {{ coche_obj.vendedor.id_usuario }}</p>
+            <!-- Agrega más campos según tus necesidades -->
+            <button type="submit">Realizar Compra</button>
+
+        </form>
+    </div>
+</body>
+</html>

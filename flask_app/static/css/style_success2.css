@@ -1,0 +1,170 @@
+.cabeza{
+    display: flex;
+    flex-direction: row;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+}
+  
+footer {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+}
+
+header{
+    background-color: #31107e;
+}
+
+.caja{
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.caja h1 img{
+    width: 220px;
+    height: 150px;
+    position: relative;
+    right: 320px;
+    opacity: 0.92;
+    border-radius: 8px;
+}
+
+.ventanas{
+    position: absolute;
+    top: 60px;
+    right: 0px;
+}
+
+.ventanas h1{
+    margin-right: 30%;
+}
+
+.ventanas li{
+    display: inline;
+    margin: 0 0 0 15px;
+    vertical-align: middle; /* Alinear verticalmente al centro */
+}
+
+.ventanas a{
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none;
+    margin-left: 15%;
+    color: rgb(179, 198, 214);
+}
+
+.ventanas a:hover{
+    color: aquamarine;
+    text-decoration: underline;
+}
+
+body{
+    background-color: #150931;
+}
+
+.carros-block {
+    display: none;
+}
+  
+.carros-block.show {
+    display: block;
+}
+
+.coche_cuadro {
+    float: left;
+    width: 33.33%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 5px solid #ccc;
+    border-radius: 10px;
+    background-color: #5b468a;
+    margin-bottom: 80px;
+    margin-right: 80px;
+    margin-left: 10%;
+}
+  
+.coche_cuadro img {
+    max-width: 20%;
+    height: auto;
+    display: block;
+    margin-left: 40%;
+}
+
+.modelo_marca_coche {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.kilometraje_coche {
+    font-weight: bold;
+}
+
+.precio_coche {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Limpia el float después de los cuadros */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.modelo_marca_coche,
+.kilometraje_coche,
+.precio_coche,
+.vendedor {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.modelo_marca_coche {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.kilometraje_coche,
+.precio_coche,
+.vendedor {
+  font-size: 20px;
+}
+
+.ver_mas{
+    background: black;
+    cursor: pointer;
+    border: none;
+    padding: 16px 320px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    border-radius: 12px;
+    margin-left: 3.5%;
+}
+
+footer {
+    text-align: center;
+    background: url('../imagenes/carretera5.png') no-repeat center;
+    background-size: cover;
+    padding: 40px;
+}
+
+.copyright{
+    color: midnightblue;
+    font-size: 13px;
+    margin: 20px;
+}

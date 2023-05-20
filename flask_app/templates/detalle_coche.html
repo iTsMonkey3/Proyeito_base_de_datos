@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/detalle_coche.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <header class="header">
+        <h1 class="titulo_pag">Detalle de {{coche_obj.marca}} {{coche_obj.modelo}}</h1>
+    </header>
+
+    <ul class="coche_cuadro">
+        <li>
+            <img src='../static/imagenes/detalle.png'>
+            <p>Matricula: {{coche_obj.matricula}}</p>
+            <p>Color: {{coche_obj.color}}</p>
+            <p>Kilometraje: {{coche_obj.kilometraje}}</p>
+            <p>Precio: {{coche_obj.precio}}</p>
+            <p>Año: {{coche_obj.age}}</p>
+            <p>Velocidad maxima: {{coche_obj.velocidadmax}}</p>
+            <p>Aceleracion de 0 a 100: {{coche_obj.acelera_0_100}}</p>
+            <p>Consumo urbano: {{coche_obj.consu_urb}}</p>
+            <p>Consumo extraurbano: {{coche_obj.consu_ext}}</p>
+            <p>Consumo mixto: {{coche_obj.consu_mix}}</p>
+            <p>Emision de co2: {{coche_obj.co2_emis}}</p>
+            <p>Carroceria: {{coche_obj.carroceria}}</p>
+            <p>Numero de puertas: {{coche_obj.num_puertas}}</p>
+            <p>Numero de plazas: {{coche_obj.num_plazas}}</p>
+            <p>Limite del deposito de combustible: {{coche_obj.depositol}}</p>
+            <p>Tipo de combustible: {{coche_obj.combustible}}</p>
+            <p>Numero de cilindros: {{coche_obj.num_cilindros}}</p>
+            <p>Disposicion de los cilindros: {{coche_obj.disposicion_cil}}</p>
+            <p>Tipo de transmision: {{coche_obj.transmision}}</p>
+            <p>Numero de velociadades: {{coche_obj.num_velocidades}}</p>
+            <p>Tipo de traccion: {{coche_obj.traccion}}</p>
+            <button><a href="/compra/{{coche_obj.id_coche}}">Comprar</a></button>
+        </li>
+    </ul>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style_registro.css">
+    
+    <title>Registro de Carro</title>
+
+</head>
+<body>
+  <h1>Registro de Carro</h1>
+
+  <form action="/ingresar_coche_db" method="POST">
+
+    <label for="matricula">Matrícula:</label>
+    <input type="text" name="matricula">
+
+    <label for="modelo">Modelo:</label>
+    <input type="text" name="modelo">
+
+    <label for="marca">Marca:</label>
+    <input type="text" name="marca">
+
+    <label for="color">Color:</label>
+    <input type="text" name="color">
+
+    <label for="kilometraje">Kilometraje:</label>
+    <input type="number" name="kilometraje">
+
+    <label for="precio">Precio:</label>
+    <input type="number" name="precio">
+
+    <label for="age">Anhio:</label>
+    <input type="number" name="age">
+
+    <label for="velocidadmax">Velocidad maxima:</label>
+    <input type="number" name="velocidadmax">
+
+    <label for="acelera_0_100">Acelera de 0 a 100 en:</label>
+    <input type="number" name="acelera_0_100">
+
+    <label for="consu_urb">Consumo urbano:</label>
+    <input type="number" name="consu_urb">
+
+    <label for="consu_ext">Consumo extraurbano:</label>
+    <input type="number" name="consu_ext">
+
+    <label for="consu_mix">Consumo mixto:</label>
+    <input type="number" name="consu_mix">
+
+    <label for="co2_emis">Emision de co2:</label>
+    <input type="number" name="co2_emis">
+
+    <label for="carroceria">Carroceria:</label>
+    <input type="text" name="carroceria">
+
+    <label for="num_puertas">Numero de puertas:</label>
+    <input type="number" name="num_puertas">
+
+    <label for="num_plazas">Numero de plazas:</label>
+    <input type="number" name="num_plazas">
+
+    <label for="depositol">Deposito de combustible:</label>
+    <input type="number" name="depositol">
+
+    <label for="combustible">Combustible:</label>
+    <input type="text" name="combustible">
+
+    <label for="num_cilindros">Numero de cilindros:</label>
+    <input type="number" name="num_cilindros">
+
+    <label for="disposicion_cil">Disposicion de los cilindros:</label>
+    <input type="text" name="disposicion_cil">
+
+    <label for="transmision">Transmision:</label>
+    <input type="text" name="transmision">
+
+    <label for="num_velocidades">Numero de velocidades:</label>
+    <input type="number" name="num_velocidades">
+
+    <label for="traccion">Traccion:</label>
+    <input type="text" name="traccion">
+
+    <input type="submit" value="Registrar">
+  </form>
+</body>
+</html>

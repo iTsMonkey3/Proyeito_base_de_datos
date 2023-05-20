@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style_registro_coche2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<body>
+
+    <header class="header">
+        <div class="welcome-back">
+            <div class="message">
+                <h2>Registro de coches Legendary Motosport</h2>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-form sign-up">
+        <form action="/ingresar_coche_db" method="POST" class="formulario">
+            
+            <p class="cuenta-gratis">Ingresa los datos del coche que deseas publicar</p>
+            <input type="text" name="matricula" placeholder="Matricula">
+            <input type="text" name="modelo" placeholder="Modelo">
+            <input type="text" name="marca" placeholder="Marca">
+            <input type="text" name="color" placeholder="Color">
+            <input type="number" step=0.01 name="kilometraje" placeholder="Kilometraje">
+            <input type="number" step=0.01 name="precio" placeholder="Precio">
+            <input type="number" name="age" placeholder="Año">
+            <input type="number" step=0.01 name="velocidadmax" placeholder="Velocidad maxima">
+            <input type="number" step=0.01 name="acelera_0_100" placeholder="Aceleracion de 0 a 100">
+            <input type="number" step=0.01 name="consu_urb" placeholder="Consumo urbano">
+            <input type="number" step=0.01 name="consu_ext" placeholder="Consumo extraurbano">
+            <input type="number" step=0.01 name="consu_mix" placeholder="Consumo mixto">
+            <input type="number" step=0.01 name="co2_emis" placeholder="Emision de co2">
+            <input type="text" name="carroceria" placeholder="Carroceria">
+            <input type="number" name="num_puertas" placeholder="Numero de puertas">
+            <input type="number" name="num_plazas" placeholder="Numero de plazas">
+            <input type="number" step=0.01 name="depositol" placeholder="Limite del deposito de combustible">
+            <input type="text" name="combustible" placeholder="Tipo de combustible">
+            <input type="number" name="num_cilindros" placeholder="Numero de cilindros">
+            <input type="text" name="disposicion_cil" placeholder="Disposicion de los cilindros">
+            <input type="text" name="transmision" placeholder="Tipo de transmision">
+            <input type="number" name="num_velocidades" placeholder="Numero de velociadades">
+            <input type="text" name="traccion" placeholder="Tipo de traccion">
+            <input type="submit" value="Registrar">
+
+        </form>
+    </div>
+
+</body>
+</html>

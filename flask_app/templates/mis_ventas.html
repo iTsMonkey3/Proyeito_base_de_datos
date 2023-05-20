@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/style_mis_ventas.css">
+    <title>Mis ventas</title>
+</head>
+<body>
+
+    <header class="header">
+        <h1 class="titulo_pag">Mis ventas</h1>
+    </header>
+
+    <main>
+        {% if orden_obj |length != 0 %}
+        
+            <ul class="coche_cuadro">
+                {% for ficha in orden_obj %}
+                    <li>
+                        <p> Matricula: {{ficha.matricula}} </p>
+                        <p> Modelo: {{ficha.modelo}} </p>
+                        <p> Marca: {{ficha.marca}} </p>
+                        <p> Precio: {{ficha.precio}} </p>
+                        <img src='../static/imagenes/{{loop.index}}.jpg'>
+                        <p> Vendido a: {{ficha.nombre}} {{ficha.apellidopat}}</p>
+                        <p> Telefono de contacto: {{ficha.telefono}} </p>
+                        <p> Fecha de venta: {{ficha.fecha}} </p>
+                    </li>
+                
+                {% endfor %}
+            </ul>
+        
+        {% else %}
+            <div class="alerta">
+                <h1><a href="/registro_coche">No brother, ponte a chambear dando click aqui</a></h1>
+            </div>
+        {% endif %}
+    </main>
+
+</body>
+</html>

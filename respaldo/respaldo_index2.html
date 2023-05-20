@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/style_success.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="caja">
+            <h1><img src="../static/imagenes/logo_head4.png"></h1>
+
+            <nav class="ventanas">
+                <ul>
+                    <li><a href="/registro_coche">Regsitrar coche</a></li>
+                    <li><a href="/mis_coches">Ver mis publicaciones</a></li>
+                    <li><a href="/mis_ventas">Ver mis ventas</a></li>
+                    <li><a href="/mis_compras">Ver mis compras</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <button><a href="/logout">Salite care chimba</a></button>
+
+    <h1>Welcome {{logged_user.nombre}} {{logged_user.id_usuario}}</h1>
+
+    <main>
+
+        <div class="clearfix">
+            {% for coche in todos_los_coches %}
+                {% if logged_user.id_usuario != coche.vendedor.id_usuario %}
+                    <div class="coche_cuadro">
+                        <ul class="producto">
+                            <h3 class="modelo_marca_coche"> {{coche.marca}} {{coche.modelo}}</h3>
+                            <img src='../static/imagenes/{{loop.index}}.jpg'>
+                            <p class="kilometraje_coche"> Kilometraje: {{coche.kilometraje}} </p>
+                            <p class="precio_coche"> Precio: {{coche.precio}} </p>
+                            <p class="vendedor">Vendido por: {{coche.vendedor.nombre}}</p>
+                            <button class="ver_mas"><a href="/detalle/{{coche.id_coche}}">Ver mas</a></button>
+                        </ul>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <div class="clearfix">
+            {% for coche in todos_coches_caro_a_barato %}
+                {% if logged_user.id_usuario != coche.vendedor.id_usuario %}
+                    <div class="coche_cuadro">
+                        <h3 class="modelo_marca_coche"> {{coche.marca}} {{coche.modelo}}</h3>
+                        <img src='../static/imagenes/{{loop.index}}.jpg'>
+                        <p class="kilometraje_coche"> Kilometraje: {{coche.kilometraje}} </p>
+                        <p class="precio_coche"> Precio: {{coche.precio}} </p>
+                        <p class="vendedor">Vendido por: {{coche.vendedor.nombre}}</p>
+                        <button class="ver_mas"><a href="/detalle/{{coche.id_coche}}">Ver mas</a></button>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <div class="clearfix">
+            {% for coche in todos_coches_barato_a_caro %}
+                {% if logged_user.id_usuario != coche.vendedor.id_usuario %}
+                    <div class="coche_cuadro">
+                        <h3 class="modelo_marca_coche"> {{coche.marca}} {{coche.modelo}}</h3>
+                        <img src='../static/imagenes/{{loop.index}}.jpg'>
+                        <p class="kilometraje_coche"> Kilometraje: {{coche.kilometraje}} </p>
+                        <p class="precio_coche"> Precio: {{coche.precio}} </p>
+                        <p class="vendedor">Vendido por: {{coche.vendedor.nombre}}</p>
+                        <button class="ver_mas"><a href="/detalle/{{coche.id_coche}}">Ver mas</a></button>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <div class="clearfix">
+        {% for coche in todos_coches_marca %}
+            {% if logged_user.id_usuario != coche.vendedor.id_usuario %}
+                <div class="coche_cuadro">
+                    <h3 class="modelo_marca_coche"> {{coche.marca}} {{coche.modelo}}</h3>
+                    <img src='../static/imagenes/{{loop.index}}.jpg'>
+                    <p class="kilometraje_coche"> Kilometraje: {{coche.kilometraje}} </p>
+                    <p class="precio_coche"> Precio: {{coche.precio}} </p>
+                    <p class="vendedor">Vendido por: {{coche.vendedor.nombre}}</p>
+                    <button class="ver_mas"><a href="/detalle/{{coche.id_coche}}">Ver mas</a></button>
+                </div>
+            {% endif %}
+        {% endfor %}
+        </div>
+    
+    </main>
+
+    <footer>
+
+        <img src="../static/imagenes/logo.png">
+        <p class="copyright">&copy Copyright Legendary Motosport</p>
+    
+    </footer>
+
+</body>
+
+</html>

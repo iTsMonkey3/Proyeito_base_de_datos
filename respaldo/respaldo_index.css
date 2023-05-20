@@ -1,0 +1,89 @@
+header{
+    background-color: #31107e;
+}
+
+.caja{
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.caja h1 img{
+    width: 220px;
+    height: 150px;
+    position: relative;
+    right: 320px;
+    opacity: 0.92;
+    border-radius: 8px;
+}
+
+.ventanas{
+    position: absolute;
+    top: 60px;
+    right: 0px;
+}
+
+.ventanas h1{
+    margin-right: 30%;
+}
+
+.ventanas li{
+    display: inline;
+    margin: 0 0 0 15px;
+    vertical-align: middle; /* Alinear verticalmente al centro */
+}
+
+.ventanas a{
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none;
+    margin-left: 15%;
+    color: rgb(179, 198, 214);
+}
+
+.ventanas a:hover{
+    color: aquamarine;
+    text-decoration: underline;
+}
+
+.producto{
+    width: 940px;
+    margin: 0 auto;
+    padding: 50%;
+}
+
+.producto img{
+    max-height: 10%;
+    height: auto;
+}
+
+
+.coche_cuadro {
+    float: left;
+    width: 33.33%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.modelo_marca_coche {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.kilometraje_coche {
+    font-weight: bold;
+}
+
+.precio_coche {
+    color: #FF0000;
+    font-weight: bold;
+}
+
+/* Limpia el float después de los cuadros */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}

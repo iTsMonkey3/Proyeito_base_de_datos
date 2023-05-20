@@ -1,0 +1,200 @@
+header{
+    background-color: #1e1e1e;
+}
+
+.usuario{
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #fff;
+}
+
+.cerrar_sesion{
+    position: absolute;
+    left: 0;
+    top: 120px;
+    justify-content: center;
+    background-color: #323232;
+    font-size: 23px;
+}
+
+.filtros{
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+}
+
+.filtros button{
+    display: inline-block;
+    padding: 20px 30px;
+    margin-right: 100px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: #979797;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.filtros button:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+  
+.filtros button:active {
+    background-color: #000000;
+    color: #fff;
+}
+
+.caja{
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.caja h1 img{
+    width: 220px;
+    height: 150px;
+    position: relative;
+    right: 320px;
+    opacity: 0.92;
+    border-radius: 8px;
+}
+
+.ventanas{
+    position: absolute;
+    top: 60px;
+    right: 0px;
+}
+
+.ventanas h1{
+    margin-right: 30%;
+}
+
+.ventanas li{
+    display: inline;
+    margin: 0 0 0 15px;
+    vertical-align: middle; /* Alinear verticalmente al centro */
+}
+
+.ventanas a{
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none;
+    margin-left: 15%;
+    color: rgb(179, 198, 214);
+}
+
+.ventanas a:hover{
+    color: aquamarine;
+    text-decoration: underline;
+}
+
+body{
+    background-color: #323232;
+}
+
+.carros-block {
+    display: none;
+}
+  
+.carros-block.show {
+    display: block;
+}
+
+.coche_cuadro {
+    float: left;
+    width: 33.33%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 5px solid #ccc;
+    border-radius: 10px;
+    background-color: #b9b9b9;
+    margin-bottom: 80px;
+    margin-right: 80px;
+    margin-left: 10%;
+}
+  
+.coche_cuadro img {
+    max-width: 20%;
+    height: auto;
+    display: block;
+    margin-left: 40%;
+}
+
+.modelo_marca_coche {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.kilometraje_coche {
+    font-weight: bold;
+}
+
+.precio_coche {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Limpia el float después de los cuadros */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.modelo_marca_coche,
+.kilometraje_coche,
+.precio_coche,
+.vendedor {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.modelo_marca_coche {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.kilometraje_coche,
+.precio_coche,
+.vendedor {
+  font-size: 20px;
+}
+
+.ver_mas{
+    background: black;
+    cursor: pointer;
+    border: none;
+    padding: 16px 320px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    border-radius: 12px;
+    margin-left: 3.5%;
+}
+
+footer {
+    text-align: center;
+    background: url('../imagenes/carretera5.png') no-repeat center;
+    background-size: cover;
+    padding: 40px;
+}
+
+.copyright{
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    margin: 20px;
+}

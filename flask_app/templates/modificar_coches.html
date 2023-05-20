@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style_registro_coche2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-form sign-up">
+        <div class="welcome-back">
+            <div class="message">
+                <h2>Registro de coches Legendary Motosport</h2>
+            </div>
+        </div>
+        <form action="/modificar_coche_db/{{coche_obj.id_coche}}" method="POST" class="formulario">
+            
+            <p class="cuenta-gratis">Ingresa los datos del coche que deseas publicar</p>
+            <input type="text" name="matricula" placeholder="Matricula" value={{coche_obj.matricula}}>
+            <input type="text" name="modelo" placeholder="Modelo" value={{coche_obj.modelo}}>
+            <input type="text" name="marca" placeholder="Marca" value={{coche_obj.marca}}>
+            <input type="text" name="color" placeholder="Color" value={{coche_obj.color}}>
+            <input type="number" step=0.01 name="kilometraje" placeholder="Kilometraje" value={{coche_obj.kilometraje}}>
+            <input type="number" step=0.01 name="precio" placeholder="Precio" value={{coche_obj.precio}}>
+            <input type="number" name="age" placeholder="Año" value={{coche_obj.age}}>
+            <input type="number" step=0.01 name="velocidadmax" placeholder="Velocidad maxima" value={{coche_obj.velocidadmax}}>
+            <input type="number" step=0.01 name="acelera_0_100" placeholder="Aceleracion de 0 a 100" value={{coche_obj.acelera_0_100}}>
+            <input type="number" step=0.01 name="consu_urb" placeholder="Consumo urbano" value={{coche_obj.consu_urb}}>
+            <input type="number" step=0.01 name="consu_ext" placeholder="Consumo extraurbano" value={{coche_obj.consu_ext}}>
+            <input type="number" step=0.01 name="consu_mix" placeholder="Consumo mixto" value={{coche_obj.consu_mix}}>
+            <input type="number" step=0.01 name="co2_emis" placeholder="Emision de co2" value={{coche_obj.co2_emis}}>
+            <input type="text" name="carroceria" placeholder="Carroceria" value={{coche_obj.carroceria}}>
+            <input type="number" name="num_puertas" placeholder="Numero de puertas" value={{coche_obj.num_puertas}}>
+            <input type="number" name="num_plazas" placeholder="Numero de plazas" value={{coche_obj.num_plazas}}>
+            <input type="number" step=0.01 name="depositol" placeholder="Limite del deposito de combustible" value={{coche_obj.depositol}}>
+            <input type="text" name="combustible" placeholder="Tipo de combustible" value={{coche_obj.combustible}}>
+            <input type="number" name="num_cilindros" placeholder="Numero de cilindros" value={{coche_obj.num_cilindros}}>
+            <input type="text" name="disposicion_cil" placeholder="Disposicion de los cilindros" value={{coche_obj.disposicion_cil}}>
+            <input type="text" name="transmision" placeholder="Tipo de transmision" value={{coche_obj.transmision}}>
+            <input type="number" name="num_velocidades" placeholder="Numero de velociadades" value={{coche_obj.num_velocidades}}>
+            <input type="text" name="traccion" placeholder="Tipo de traccion" value={{coche_obj.traccion}}>
+
+            <input type="submit" value="Modificar">
+
+        </form>
+    </div>
+</body>
+</html>
